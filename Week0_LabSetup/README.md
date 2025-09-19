@@ -1,89 +1,80 @@
-# Week 0 — Lab Setup
+# Week 0 — Lab Setup  
+## 🖥️ Step 1: Virtual Machine Creation (VMware Workstation)
 
-This folder contains documentation, screenshots, and notes for the initial lab environment setup.  
-The goal of Week 0 is to prepare a working virtual lab with Windows Server (Domain Controller), Windows 10 clients, and proper networking.  
-
----
-
-## 🎯 Objectives
-- Install and configure a virtualization platform (VMware / VirtualBox / Hyper-V).  
-- Deploy a Windows Server VM to act as the Domain Controller.  
-- Deploy a Windows 10 Client VM.  
-- Configure internal networking between all machines.  
-- Take a baseline snapshot for rollback safety.  
+This step covers creating new Virtual Machines (VMs) for our Active Directory lab environment using **VMware Workstation**.  
+We will set up:  
+- **Windows Server 2022** → Domain Controller (`DC1.cyberopopo.local`)  
+- **Windows 10 Pro** → Client 1  
+- **Windows 11 Pro** → Client 2  
 
 ---
 
-## 🖥️ Step 1: Virtualization Platform Setup
-1. Download and install VMware Workstation / VirtualBox.  
-2. Verify installation.  
-
-📸 **Screenshot to include**:  
-- Virtualization software installed successfully.  
-![VMware Installed](https://i.imgur.com/7lnS4I9.png)
-- New VM wizard screen (choosing Windows Server / Windows 10).  
-
-_Save in `screenshots/vmware_install.png` and `screenshots/new_vm_wizard.png`._
+### 1. Open VMware Workstation
+- Launch **VMware Workstation**.  
+- On the home screen, click **Create a New Virtual Machine**.  
+ 
+![New VM Wizard Screen](https://i.imgur.com/4OWsnHc.png)
 
 ---
 
-## 🖥️ Step 2: Deploy Domain Controller VM (Windows Server 2022)
-1. Create a new VM and allocate:  
-   - 2 CPUs  
-   - 4 GB RAM (minimum)  
-   - 60 GB disk space  
-2. Install Windows Server 2022.  
-3. After first boot, rename the server and verify OS installation.  
+### 2. Choose Configuration  
+- Select **Typical (recommended)**.  
+- Click **Next**.  
+ 
+![New VM Wizard - Typical Configuration](https://i.imgur.com/tCw9PhX.png)
 
-📸 **Screenshot to include**:  
-- VM settings page (CPU, RAM, storage).  
-- First boot screen of Windows Server.  
-- Desktop showing server name and OS.  
-
-_Save in `screenshots/dc_vm_settings.png`, `screenshots/dc_firstboot.png`, `screenshots/dc_desktop.png`._
 
 ---
 
-## 🖥️ Step 3: Deploy Windows 10 Client VM
-1. Create a new VM and allocate:  
-   - 2 CPUs  
-   - 2 GB RAM (minimum)  
-   - 40 GB disk space  
-2. Install Windows 10 Pro.  
-3. Verify desktop loads correctly.  
+### 3. Select Installation Method  
+- Choose **I will install the operating system later**.  
+- Click **Next**.  
+  
+![Select Installation Method - Install Later](https://i.imgur.com/iSAh1C0.png)
 
-📸 **Screenshot to include**:  
-- VM settings page (CPU, RAM, storage).  
-- Windows 10 installation screen.  
-- Windows 10 desktop after install.  
-
-_Save in `screenshots/win10_vm_settings.png`, `screenshots/win10_install.png`, `screenshots/win10_desktop.png`._
 
 ---
 
-## 🌐 Step 4: Networking Setup
-1. Configure a private/internal network adapter in your virtualization software.  
-2. Assign adapters to both Server and Client VMs.  
-3. Confirm connectivity inside the Server VM:  
-   - Open **Control Panel → Network Connections**.  
+### 4. Select Guest Operating System  
+- Guest OS: **Microsoft Windows**  
+- Version: **Windows Server 2022**  
+- Click **Next**  
 
-📸 **Screenshot to include**:  
-- Virtual network adapter configuration.  
-- Network connections panel inside Windows Server.  
+![Select Guest Operating System - Windows Server 2022](https://i.imgur.com/Mr7nubq.png)
 
-_Save in `screenshots/network_adapter_vm.png`, `screenshots/network_connections_server.png`._
 
 ---
 
-## 📸 Step 5: Create a Baseline Snapshot
-1. Power off VMs.  
-2. Take a snapshot of both Server and Client in their clean state.  
-3. Name snapshots: `Baseline - Fresh Install`.  
+### 5. Name the VM & Choose Location  
+- Use clear names for each VM:  
+  - `DC1-cyberopopo.local` → Domain Controller  
+- Choose storage locations for VM files.  
+- Click **Next**  
+ 
+![Name the VM and Choose Location](https://i.imgur.com/7bk0ysO.png)
 
-📸 **Screenshot to include**:  
-- Snapshot manager showing baseline snapshots.  
-
-_Save in `screenshots/baseline_snapshot.png`._
 
 ---
 
+### 6. Specify Disk Capacity  
+- Recommended sizes:  
+  - **20 GB** → Windows Server 2022 (DC)   
+- Select: **Split virtual disk into multiple files**  
+- Click **Next**  
+  
+![Disk Size Setup](https://i.imgur.com/L2zYDkc.png)
+
+
+---
+
+### 7. Finish & Customize Hardware  
+- Click **Finish** to create VM.  
+- (Optional) Adjust hardware before powering on:  
+  - **DC1 (Server 2022)** → 4 GB RAM, 2 CPU cores    
+ 
+![VM Hardware Settings](https://i.imgur.com/VutLCvg.png)
+
+---
+
+✅ At this point, all three virtual machines are created.  
+Next, we will proceed with installing **Windows Server 2022 on the Domain Controller (DC1.cyberopopo.local)**, then install and configure the **Windows 10 and 11 client machines**.  
