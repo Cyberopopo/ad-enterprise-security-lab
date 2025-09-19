@@ -76,5 +76,85 @@ We will set up:
 
 ---
 
+## 🖥️ Creating Windows 10 Pro Client VM  
+
+### 1. Start New Virtual Machine Wizard  
+- Open VMware Workstation / VirtualBox.  
+- Select **Create a New Virtual Machine**.  
+
+![New VM Wizard - Start](https://i.imgur.com/dRyv2Yf.png)
+
+---
+
+### 2. Choose Configuration  
+- Select **Typical (recommended)**.  
+- Click **Next**.  
+
+![New VM Wizard - Typical Configuration](https://i.imgur.com/lRqaled.png)
+
+
+---
+
+### 3. Select Installation Method  
+- Choose **I will install the operating system later**.  
+- Click **Next**.  
+
+![Install Later Option](https://i.imgur.com/FlTwdgz.png)
+
+---
+
+### 4. Select Guest Operating System  
+- Guest OS: **Microsoft Windows**  
+- Version: **Windows 10 X64**  
+- Click **Next**
+ 
+![Select Windows 10 Pro](https://i.imgur.com/AldgJAX.png)
+
+
+---
+
+### 5. Name the VM & Location  
+- Suggested name: `Win10-Client1`  
+- Choose VM file storage location.  
+- Click **Next**.  
+  
+![Name the VM & Location](https://i.imgur.com/bZsuF6b.png)
+
+
+---
+
+### 6. Specify Disk Capacity  
+- Recommended: **20 GB** (since client PCs will need more than DC).  
+- Select: **Split virtual disk into multiple files**.  
+- Click **Next**.  
+ 
+![Windows 10 Disk Setup](https://i.imgur.com/EbgiQ96.png)
+
+
+---
+
+  ### 7. Customize Hardware  
+- Adjust hardware before powering on:  
+  - **RAM** → 2 GB  
+  - **CPU** → 2 cores  
+  - **Network Adapter** → Host-Only  
+  - **Add ISO** → Windows 10 Pro ISO  
+ 
+![Windows 10 Hardware Settings](https://i.imgur.com/jj7JXs0.png)
+
+
+---
+
+### 8. Finish & Power On  
+- Click **Finish** to complete VM creation.  
+- Insert Windows 10 ISO and start the installation.  
+
+![Windows 10 Installation Start](https://i.imgur.com/54TsE2r.png)
+
+---
+## Repeat this procedure to create Windows 11 Client VM
+
+
+
 ✅ At this point, all three virtual machines are created.  
 Next, we will proceed with installing **Windows Server 2022 on the Domain Controller (DC1.cyberopopo.local)**, then install and configure the **Windows 10 and 11 client machines**.  
