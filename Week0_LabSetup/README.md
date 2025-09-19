@@ -20,6 +20,7 @@ The goal of Week 0 is to prepare a working virtual lab with Windows Server (Doma
 
 📸 **Screenshot to include**:  
 - Virtualization software installed successfully.  
+![VMware Installed](https://i.imgur.com/7lnS4I9.png)
 - New VM wizard screen (choosing Windows Server / Windows 10).  
 
 _Save in `screenshots/vmware_install.png` and `screenshots/new_vm_wizard.png`._
@@ -86,4 +87,3 @@ _Save in `screenshots/baseline_snapshot.png`._
 
 ---
 
-## 📂 Folder Structure
