@@ -18,9 +18,9 @@ The project is structured over **6 weeks**, showcasing both **offensive (Red Tea
 ## 📅 Weekly Roadmap
 
 ### **Week 0 — Lab Setup**
-- Configure virtualization environment (VMware/VirtualBox/Hyper-V).
+- Configure virtualization environment (VMware).
 - Create isolated network for lab.
-- Install base OS (Windows Server, Windows 10, Kali Linux).
+- Install base OS (Windows Server, Windows 10, Windows 11, Kali Linux).
 
 ### **Week 1 — Company is Born (Foundation)**
 - Deploy Windows Server as Domain Controller (`cyberopopo.local`).
